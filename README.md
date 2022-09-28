@@ -15,7 +15,7 @@
     //  设置用户steam的密码
       sudo passwd steam
       
-    //  将steam用户添加到 sudo 用户组（在root用户下操作）：
+    //  将steam用户添加到 sudo 用户组（在root用户下操作）
       sudo adduser steam sudo
     
     //  切换到新建的steam 用户：
@@ -76,7 +76,7 @@
       
       sudo chmod a+x hlds_run hlds_linux hltv
       
-      // 启动 cs1.6 服务器，服务器端口为 27015，地图为“de_dust2”，最大容纳人数为16，要关闭按住Ctrl+C即可
+      // 启动 cs1.6 服务器，服务器端口为 27015，地图为“de_dust2”，最大容纳人数为16，要关闭按住Ctrl+C即可，此行命令要在目录~/cs1.6下运行
       ./hlds_run -game cstrike +port 27015 +map de_dust2 +maxplayers 16
       
   ## 七、开放服务器端口
