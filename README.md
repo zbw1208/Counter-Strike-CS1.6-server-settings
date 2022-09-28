@@ -36,10 +36,8 @@
       
       sudo apt install steamcmd
 
-      ![QQ图片20220929034620](https://user-images.githubusercontent.com/114615632/192874906-ce1eb448-64c9-4962-b0f2-30ad44155457.png)
       按Tab键选中Ok，按Enter
       
-      ![image](https://user-images.githubusercontent.com/114615632/192875190-c0ae7b0d-9e30-4dde-9e57-5304c070901d.png)
       按DownArrow（方向键下）选中I AGREE,按Enter
       
    四、进入SteamCMD控制台
@@ -82,8 +80,8 @@
       ./hlds_run -game cstrike +port 27015 +map de_dust2 +maxplayers 16
       
   七、开放服务器端口
+     
+      云服务器管理界面中找到防火墙，添加两个协议分别为TCP和UDP的规则，端口范围均为27015，可满足基本运行需求
+     
       
-      云服务器管理界面中找到防火墙，端口如下
-      
-      ![image](https://user-images.githubusercontent.com/114615632/192879609-0c07d686-333b-4358-a93d-8e08b0d8b311.png)
 
