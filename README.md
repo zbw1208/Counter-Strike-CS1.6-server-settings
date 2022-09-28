@@ -85,5 +85,67 @@
      
   ## 参考文档：(https://www.wlplove.com/archives/83/#menu_index_2)
   
-# 服务器参数配置、地图添加、插件安装（待）
+# 插件安装破解服务器正版限制
 
+  ## 一、安装Metamod
+  
+    本机下载metamod_1.3.0.86.zip，并解压缩。
+  
+    su steam
+  
+    cd ~/cs1.6/cstrike
+  
+    mkdir addons
+  
+    cd addons
+  
+    mkdir metamod
+  
+    cd ~/cs1.6
+  
+    sudo chmod a+w cstrike cstrike/addons cstrike/addons/metamod
+    
+    //  以上代码结束后，将解压缩文件中的addons/metamod目录中所有文件上传至服务器~/cs1.6/cstrike/addons/metamod
+  
+    vi cstrike/liblist.gam
+  
+    //  找到gamedll_linux "dlls/cs.so"这一行
+    //  按下i，移动光标到这一行，替换为gamedll_linux "addons/metamod/metamod_i386.so"
+    //  按下Esc，输入:wq，按回车
+  
+  ## 二、安装Rehlds
+  
+    本机下载rehlds-bin-3.11.0.767.zip，并解压缩。
+    
+    rm ~/cs1.6/engine_i486.so
+    
+    //  以上代码结束后，将解压缩文件中的bin/linux32/engine_i486.so上传至服务器的~/cs1.6目录
+    
+  ## 三、安装reunion
+  
+    本机下载reunion_0.1.92.zip，并解压缩。
+    
+    mkdir ~/cs1.6/cstrike/addons/reunion
+    
+    sudo chmod a+w ~/cs1.6/cstrike/addons/reunion
+    
+    //  以上代码结束后，将解压缩文件中的bin/Linux/reunion_mm_i386.so上传至服务器的~/cs1.6/cstrike/addons/reunion目录
+    
+    vi ~/cs1.6/cstrike/addons/metamod/plugins.ini
+  
+    //  按下i，粘贴linux addons/reunion/reunion_mm_i386.so。
+    //  按下Esc，输入:wq，按回车
+    
+    sudo chmod a+w cs1.6
+    
+    //  上传之前的解压文件夹中的reunion.cfg到~/cs1.6
+    
+    重新启动服务器程序，如./hlds_run -game cstrike +port 27015 +map de_dust2 +maxplayers 16
+    
+    然后输入meta list，回车
+    出现以下内容表示安装成功
+    
+    Currently loaded plugins:
+      description      stat pend  file              vers      src   load  unlod
+    [1] Reunion          RUN   -    reunion_mm_i386.  v0.1.0.9  ini   Start Never 
+    1 plugins, 1 running
