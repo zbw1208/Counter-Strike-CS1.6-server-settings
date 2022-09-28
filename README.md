@@ -1,10 +1,10 @@
 # Counter-Strike 服务器配置（Linux）
-  一、设置root账户密码
+  ## 一、设置root账户密码
   
     //  第一次使用Linux服务器时，先设置root账户的密码
     sudo passwd root
   
-  二、创建新用户
+  ## 二、创建新用户
   
     //  SteamCMD不建议使用root用户运行
     
@@ -21,7 +21,7 @@
     //  切换到新建的steam 用户：
       su steam
       
-   三、SteamCMD安装
+   ## 三、SteamCMD安装
       
       //  安装过程中任何的(Y/n)? 均输入y并Enter
       //  以下代码建议来两遍，确保成功安装
@@ -40,11 +40,11 @@
       
       按DownArrow（方向键下）选中I AGREE,按Enter
       
-   四、进入SteamCMD控制台
+   ## 四、进入SteamCMD控制台
    
       steamcmd
    
-   五、下载游戏服务器文件
+   ## 五、下载游戏服务器文件
       
       //  设置文件下载位置为绝对路径
       force_install_dir /home/steam/cs1.6
@@ -62,7 +62,7 @@
       
       //  输入quit并回车，退出SteamCMD
       
-  六、启动服务器程序
+  ## 六、启动服务器程序
   
       cd
       
@@ -79,11 +79,11 @@
       // 启动 cs1.6 服务器，服务器端口为 27015，地图为“de_dust2”，最大容纳人数为16，要关闭按住Ctrl+C即可
       ./hlds_run -game cstrike +port 27015 +map de_dust2 +maxplayers 16
       
-  七、开放服务器端口
+  ## 七、开放服务器端口
      
       云服务器管理界面中找到防火墙，添加两个协议分别为TCP和UDP的规则，端口范围均为27015，可满足基本运行需求
      
-  [参考文档]：(https://www.wlplove.com/archives/83/#menu_index_2)
+  ## 参考文档：(https://www.wlplove.com/archives/83/#menu_index_2)
   
 # 服务器参数配置、地图添加、插件安装（待）
 
