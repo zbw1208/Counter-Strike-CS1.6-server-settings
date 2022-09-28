@@ -149,3 +149,26 @@
       description      stat pend  file              vers      src   load  unlod
     [1] Reunion          RUN   -    reunion_mm_i386.  v0.1.0.9  ini   Start Never 
     1 plugins, 1 running
+
+# 安装插件增加游戏功能
+
+  ## 安装 AMX Mod X
+  
+    //  本机下载amxmodx.tar.gz，上传至~/cs1.6/cstrike/addons目录，并在该目录解压
+  
+    tar -zxvf amxmodx.tar.gz
+  
+    vi metamod/plugins.ini
+  
+    //  按i，新一行添加linux addons/amxmodx/dlls/amxmodx_mm_i386.so，按Esc，输入:wq，按回车
+  
+    重新启动服务器程序，如./hlds_run -game cstrike +port 27015 +map de_dust2 +maxplayers 16
+  
+    然后输入meta list，回车
+    出现以下内容表示安装成功
+  
+    Currently loaded plugins:
+    description      stat pend  file              vers      src   load  unlod
+    [ 1] Reunion          RUN   -    reunion_mm_i386.  v0.1.0.9  ini   Start Never
+    [ 2] AMX Mod X        RUN   -    amxmodx_mm_i386.  v1.8.2    ini   Start ANY  
+    2 plugins, 2 running
